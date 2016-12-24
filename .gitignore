@@ -46,3 +46,4 @@ site-lisp/package/
 /anaconda-mode/
 /.historian
 /.uptimes.el
+org-*
