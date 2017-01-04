@@ -126,8 +126,8 @@
                 (lambda (x) (append myComment (format "\n * %s" x)))
                 (split-string (buffer-string) "\n" t)) " "))))
 
-(add-to-list 'load-path "~/.emacs.d/org-9.0.1/lisp")
-(add-to-list 'load-path "~/.emacs.d/org-9.0.1/contrib/lisp" t)
+(add-to-list 'load-path "~/Repository/org-mode/lisp")
+(add-to-list 'load-path "~/Repository/org-mode/contrib/lisp" t)
 
 ;; auto mode alist
 ;; (add-to-list 'auto-mode-alist '("\\.gpg\\'" . text-mode))
