@@ -24,7 +24,7 @@
  ;; snaityinc-solarized-light/dark
  ;; base16-default-dark
  ;; base16-default-ocean
- '(custom-enabled-themes (quote (base16-ocean))))
+ '(custom-enabled-themes (quote (base16-default-dark))))
 
 (let ((en-font-family "Monaco") ;; Monaco; DejaVu Sans Mono; Hack;
       (cn-font-family "PingFang SC") ;; Microsoft Yahei
