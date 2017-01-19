@@ -23,23 +23,25 @@
  ;; sanityinc-tomorrow-light/eighties/night
  ;; snaityinc-solarized-light/dark
  ;; base16-default-dark
- '(custom-enabled-themes (quote (base16-default-dark))))
+ ;; base16-default-ocean
+ '(custom-enabled-themes (quote (base16-ocean))))
 
-;; font family: Hack, Monaco
-(custom-set-faces
- ;; Monaco; DejaVu Sans Mono;
- '(default ((t (:family "Monaco" :weight Regular :height 120 :width normal)))))
-;;; Setting Chinese Font 中文字体
-;; Microsoft Yahei
-;; 15
-(let ((font-family "PingFang SC")
+(let ((en-font-family "Monaco") ;; Monaco; DejaVu Sans Mono; Hack;
+      (cn-font-family "PingFang SC") ;; Microsoft Yahei
       (font-size 12))
   (if (display-graphic-p)
-      (dolist (charset '(kana han symbol cjk-misc bopomofo))
-        (set-fontset-font
-         (frame-parameter nil 'font)
-         charset
-         (font-spec :family font-family :size font-size :height font-size)))))
+      (progn
+        ;; Setting English Font
+        (custom-set-faces
+         ;; :height 120 :width normal
+         '(default ((t (:family en-font-family :weight Regular :size font-size)))))
+        ;; Setting Chinese Font 中文字体
+        (dolist (charset '(kana han symbol cjk-misc bopomofo))
+          (set-fontset-font
+           (frame-parameter nil 'font)
+           charset
+           ;; :height font-size
+           (font-spec :family cn-font-family :size (+ 1 font-size)))))))
 
 ;; themes:
 ;; '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
