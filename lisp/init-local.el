@@ -13,6 +13,8 @@
 ;;                    (replace-regexp-in-string
 ;;                     (concat "/home/" user-login-name) "~"
 ;;                     (or buffer-file-name "%b"))))))
+
+(require-package "base16-theme")
 (custom-set-variables
  '(user-full-name "Junjia Ni")
  '(user-mail-address "creamidea@gmail.com")
@@ -23,8 +25,9 @@
  ;; sanityinc-tomorrow-light/eighties/night
  ;; snaityinc-solarized-light/dark
  ;; base16-default-dark
- ;; base16-default-ocean
- '(custom-enabled-themes (quote (base16-default-dark))))
+ ;; base16-ocean
+ ;; base16-paraiso
+ '(custom-enabled-themes (quote (base16-ocean))))
 
 (let ((en-font-family "Monaco") ;; Monaco; DejaVu Sans Mono; Hack;
       (cn-font-family "PingFang SC") ;; Microsoft Yahei
@@ -42,48 +45,6 @@
            charset
            ;; :height font-size
            (font-spec :family cn-font-family :size (+ 1 font-size)))))))
-
-;; themes:
-;; '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
-;; sanityinc-tomorrow-night
-;; sanityinc-solarized-light
-;; sanityinc-solarized-dark
-;; sanityinc-tomorrow-eighties
-
-;; (x-focus-frame nil)
-;; :font Menlo Monaco Fira-Mono Source-Code-Pro
-;; (let ((my-favourite-font "Fira Mono")
-;;       (my-font-size "16"))
-;;   (add-to-list 'initial-frame-alist `(font . ,(concat my-favourite-font "-" my-font-size)))
-;;   (add-to-list 'default-frame-alist `(font . ,(concat my-favourite-font "-" my-font-size)))
-;;   (set-face-attribute 'default nil :family my-favourite-font :height 160))
-
-;; emacs-color-themes
-;; https://github.com/owainlewis/emacs-color-themes
-;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-themes/themes")
-;; (load-theme 'brin t)
-;; (load-theme 'junio t)
-
-;; solarized
-;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
-;; (load-theme 'solarized t)
-;; (custom-set-variables
-;;  '(solarized-termcolors 256)
-;;  '(solarized-contrast 'high)
-;;  '(solarized-visibility 'high)
-;;  '(solarized-degrade t))
-;; (set-frame-parameter nil 'background-mode 'dark)
-;; (set-terminal-parameter nil 'background-mode 'dark)
-;; (enable-theme 'solarized)
-
-;; tomorrow-theme
-;; (require 'color-theme-sanityinc-tomorrow)
-;; (load-theme 'color-theme-sanityinc-tomorrow-night)
-;; (load-file "~/.emacs.d/themes/tomorrow-theme/color-theme-tomorrow.el")
-;; (require 'color-theme-tomorrow)
-;; (load-theme 'tomorrow-night-bright t)
-;; (load-theme 'tomorrow-night t)
-;; (load-theme 'tomorrow-night tomorrow-night-eighties t)
 
 ;; or use (string-equal system-type "windows-nt")
 (when window-system
