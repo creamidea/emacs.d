@@ -14,38 +14,6 @@
 ;;                     (concat "/home/" user-login-name) "~"
 ;;                     (or buffer-file-name "%b"))))))
 
-(require-package "base16-theme")
-(custom-set-variables
- '(user-full-name "Junjia Ni")
- '(user-mail-address "creamidea@gmail.com")
- '(display-battery-mode t)
- '(display-time-mode t)
- '(menu-bar-mode nil)
- '(tool-bar-mode nil)
- ;; sanityinc-tomorrow-light/eighties/night
- ;; snaityinc-solarized-light/dark
- ;; base16-default-dark
- ;; base16-ocean
- ;; base16-paraiso
- '(custom-enabled-themes (quote (base16-ocean))))
-
-(let ((en-font-family "Monaco") ;; Monaco; DejaVu Sans Mono; Hack;
-      (cn-font-family "PingFang SC") ;; Microsoft Yahei
-      (font-size 12))
-  (if (display-graphic-p)
-      (progn
-        ;; Setting English Font
-        (custom-set-faces
-         ;; :height 120 :width normal
-         '(default ((t (:family en-font-family :weight Regular :size font-size)))))
-        ;; Setting Chinese Font 中文字体
-        (dolist (charset '(kana han symbol cjk-misc bopomofo))
-          (set-fontset-font
-           (frame-parameter nil 'font)
-           charset
-           ;; :height font-size
-           (font-spec :family cn-font-family :size (+ 1 font-size)))))))
-
 ;; or use (string-equal system-type "windows-nt")
 (when window-system
   "1) try to improve slow performance on windows."
@@ -63,13 +31,48 @@
 ;; (set-frame-parameter (selected-frame) 'alpha '(95 95))
 ;; (add-to-list 'default-frame-alist '(alpha 95 95))
 
+(custom-set-variables
+ '(user-full-name "Junjia Ni")
+ '(user-mail-address "creamidea@gmail.com")
+ '(display-battery-mode t)
+ '(display-time-mode t)
+ '(menu-bar-mode nil)
+ '(tool-bar-mode nil))
+
+;; Setting theme and font
+(require-package 'base16-theme)
+(eval-after-load 'base16-theme
+  (custom-set-variables
+   ;; sanityinc-tomorrow-light/eighties/night
+   ;; snaityinc-solarized-light/dark
+   ;; base16-default-dark
+   ;; base16-ocean
+   ;; base16-paraiso
+   '(custom-enabled-themes (quote (base16-ocean)))))
+(let ((en-font-family "Monaco") ;; Monaco; DejaVu Sans Mono; Hack;
+      (cn-font-family "PingFang SC") ;; Microsoft Yahei
+      (font-size 12))
+  (if (display-graphic-p)
+      (progn
+        ;; Setting English Font
+        (custom-set-faces
+         ;; :height 120 :width normal
+         '(default ((t (:family en-font-family :weight Regular :size font-size)))))
+        ;; Setting Chinese Font 中文字体
+        (dolist (charset '(kana han symbol cjk-misc bopomofo))
+          (set-fontset-font
+           (frame-parameter nil 'font)
+           charset
+           ;; :height font-size
+           (font-spec :family cn-font-family :size (+ 1 font-size)))))))
+
 ;; Require
 ;; yasnippet
 (require-package 'yasnippet)
 ;; (after-load 'yasnippet
 ;;   (yas-global-mode 1))
-(yas-global-mode 1)
-
+(eval-after-load 'yasnippet
+  (yas-global-mode 1))
 
 (require 'epa-file)
 ;; (setq epa-file-select-keys nil)
