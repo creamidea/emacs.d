@@ -80,7 +80,6 @@
 (global-set-key (kbd "C-c g d") 'epa-decrypt-region)
 (global-set-key (kbd "C-c g v") 'epa-verify-region)
 (global-set-key (kbd "C-c g s") 'epa-sign-region)
-
 
 (defun insert-comment ()
   (interactive)
@@ -102,6 +101,7 @@
 ;; keymap binding
 ;; set M-space to setmark, repalce C-@ with C-space
 ;; (global-set-key (kbd "M-<SPC>") 'set-mark-command)
+(global-set-key (kbd "C-x C-g") 'magit-status)
 
 ;; (server-start)
 
