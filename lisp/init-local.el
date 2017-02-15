@@ -72,7 +72,10 @@
 ;; (after-load 'yasnippet
 ;;   (yas-global-mode 1))
 (eval-after-load 'yasnippet
-  (yas-global-mode 1))
+  (progn
+    (setq yas-snippet-dirs
+          '("~/.emacs.d/snippets"))
+    (yas-global-mode t)))
 
 (require 'epa-file)
 ;; (setq epa-file-select-keys nil)
