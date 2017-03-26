@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: insert html
+# key: <h
+# --
+#+BEGIN_EXPORT ${0:HTML}
+$1
+#+END_EXPORT
