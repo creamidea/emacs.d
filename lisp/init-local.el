@@ -98,7 +98,8 @@
 
 ;; auto mode alist
 ;; (add-to-list 'auto-mode-alist '("\\.gpg\\'" . text-mode))
-
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js-jsx-mode))
+(add-to-list 'auto-mode-alist '("\\.babelrc\\'" . json-mode))
 
 ;; keymap binding
 ;; set M-space to setmark, repalce C-@ with C-space
