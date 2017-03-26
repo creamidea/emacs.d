@@ -47,3 +47,5 @@ site-lisp/package/
 /.historian
 /.uptimes.el
 org-*
+/elpa-.*
+srecode-map.el
