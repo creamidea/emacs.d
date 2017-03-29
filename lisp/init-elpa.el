@@ -33,12 +33,10 @@
                                 (not (gnutls-available-p))))
 
 ;;; Also use Melpa for most packages
-;; http://melpa.org/packages/ (< 24)
-;; https://melpa.org/packages/ (> 24)
-;; http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa-stable/ (stable-mirror)
-(add-to-list 'package-archives `("melpa" . ,(if (< emacs-major-version 24)
-                                                "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"
-                                              "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+(add-to-list 'package-archives
+             `("melpa" . ,(if sanityinc/no-ssl
+                              "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"
+                            "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 
 ;; NOTE: In case of MELPA problems, the official mirror URL is
 ;; https://www.mirrorservice.org/sites/stable.melpa.org/packages/
