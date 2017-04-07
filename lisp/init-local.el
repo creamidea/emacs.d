@@ -48,7 +48,7 @@
    ;; snaityinc-solarized-light/dark
    ;; base16-paraiso
    ;; base16-tomorrow-night
-   '(custom-enabled-themes (quote (base16-default-dark)))))
+   '(custom-enabled-themes (quote (base16-tomorrow-night)))))
 (let ((en-font-family "Monaco") ;; Monaco; DejaVu Sans Mono; Hack;
       (cn-font-family "PingFang SC") ;; Microsoft Yahei
       (font-size 12))
