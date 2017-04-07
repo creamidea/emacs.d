@@ -46,6 +46,8 @@
 (setq-default js-indent-level preferred-javascript-indent-level)
 
 
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
+(add-to-list 'auto-mode-alist '("\\.es6\\'" . js2-mode))
 (add-to-list 'interpreter-mode-alist (cons "node" preferred-javascript-mode))
 
 

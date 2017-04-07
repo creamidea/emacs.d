@@ -46,6 +46,4 @@ site-lisp/package/
 /anaconda-mode/
 /.historian
 /.uptimes.el
-org-*
-/elpa-.*
-srecode-map.el
+.DS_Store

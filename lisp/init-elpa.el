@@ -26,8 +26,12 @@
 
 ;; We include the org repository for completeness, but don't normally
 ;; use it.
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+;; http://orgmode.org/elpa/
+(add-to-list 'package-archives '("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/"))
 
+(when (< emacs-major-version 24)
+  ;; http://elpa.gnu.org/packages/
+  (add-to-list 'package-archives '("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 
 (defconst sanityinc/no-ssl (and (memq system-type '(windows-nt ms-dos))
                                 (not (gnutls-available-p))))
