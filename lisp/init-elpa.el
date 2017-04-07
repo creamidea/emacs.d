@@ -29,7 +29,6 @@
 ;; use it.
 (add-to-list 'package-archives '("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/"))
 
-
 (defconst sanityinc/no-ssl (and (memq system-type '(windows-nt ms-dos))
                                 (not (gnutls-available-p))))
 
