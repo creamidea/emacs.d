@@ -28,8 +28,8 @@
 ;; (set-language-environment "UTF-8")
 ;; (format-time-string "%d %b %Y")
 ;; set transparency
-;; (set-frame-parameter (selected-frame) 'alpha '(95 95))
-;; (add-to-list 'default-frame-alist '(alpha 95 95))
+(set-frame-parameter (selected-frame) 'alpha '(99 99))
+(add-to-list 'default-frame-alist '(alpha 99 99))
 
 (custom-set-variables
  '(user-full-name "Junjia Ni")
