@@ -15,7 +15,7 @@
 ;;                     (or buffer-file-name "%b"))))))
 
 ;; or use (string-equal system-type "windows-nt")
-(when window-system
+(when (memq window-system '(w32 pc))
   "1) try to improve slow performance on windows."
   (set-frame-size (selected-frame) 80 24)
   (setq w32-get-true-file-attributes nil))
