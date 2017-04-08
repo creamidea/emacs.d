@@ -111,7 +111,7 @@
    (find-file-read-args "Find Git Repo: "
                         (confirm-nonexistent-file-or-buffer)))
   (magit-status filename))
-(global-set-key (kbd "C-x C-g") 'find-git-repo)
+(global-set-key (kbd "C-c C-g") 'find-git-repo)
 
 ;; (server-start)
 
