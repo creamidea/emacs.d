@@ -37,7 +37,11 @@
  '(display-battery-mode t)
  '(display-time-mode t)
  '(menu-bar-mode nil)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(flycheck-json-python-json-executable "python3")
+ '(python-shell-completion-native-enable nil)
+ '(python-shell-interpreter "python3")
+ '(session-use-package t nil (session)))
 
 ;; Setting theme and font
 (require-package 'base16-theme)
