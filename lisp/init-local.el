@@ -49,22 +49,29 @@
    ;; base16-paraiso
    ;; base16-tomorrow-night
    '(custom-enabled-themes (quote (base16-tomorrow-night)))))
-(let ((en-font-family "Monaco") ;; Monaco; DejaVu Sans Mono; Hack;
-      (cn-font-family "PingFang SC") ;; Microsoft Yahei
-      (font-size 12))
-  (if (display-graphic-p)
-      (progn
-        ;; Setting English Font
-        (custom-set-faces
-         ;; :height 120 :width normal
-         '(default ((t (:family en-font-family :weight Regular :size font-size)))))
-        ;; Setting Chinese Font 中文字体
-        (dolist (charset '(kana han symbol cjk-misc bopomofo))
-          (set-fontset-font
-           (frame-parameter nil 'font)
-           charset
-           ;; :height font-size
-           (font-spec :family cn-font-family :size (+ 1 font-size)))))))
+
+(defun set-en-font (family size)
+  "Set English Font.
+FAMILY: Monaco; DejaVu Sans Mono; Hack;
+SIZE"
+  (custom-set-faces
+   ;; :height 120 :width normal
+   '(default ((t (:family family :weight Regular :size size))))))
+
+(defun set-cjk-font (family size)
+  "Set Chinese/Japan/Korea Font.
+FAMILY:  Microsoft Yahei
+SIZE"
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font
+     (frame-parameter nil 'font)
+     charset
+     ;; :height font-size
+     (font-spec :family family :size size))))
+
+(set-en-font "Menlo" 12)
+(set-cjk-font "PingFang SC" 13)
+;; (if (display-graphic-p) )
 
 ;; Require
 ;; yasnippet
