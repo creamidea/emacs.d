@@ -60,7 +60,7 @@ FAMILY: Monaco; DejaVu Sans Mono; Hack;
 SIZE"
   (custom-set-faces
    ;; :height 120 :width normal
-   '(default ((t (:family family :weight Regular :size size))))))
+   `(default ((t (:family ,family :weight Regular :size ,size))))))
 
 (defun set-cjk-font (family size)
   "Set Chinese/Japan/Korea Font.
@@ -73,7 +73,7 @@ SIZE"
      ;; :height font-size
      (font-spec :family family :size size))))
 
-(set-en-font "Menlo" 12)
+(set-en-font "Monaco" 12)
 (set-cjk-font "PingFang SC" 13)
 ;; (if (display-graphic-p) )
 
