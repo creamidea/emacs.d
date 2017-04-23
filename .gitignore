@@ -47,3 +47,4 @@ site-lisp/package/
 /.historian
 /.uptimes.el
 .DS_Store
+srecode-map.el
