@@ -79,6 +79,9 @@
 (require 'init-darcs)
 (require 'init-git)
 (require 'init-github)
+(unless (version<= emacs-version "24.3")
+  (require 'init-async)
+  (require 'init-helm))
 
 (require 'init-projectile)
 
