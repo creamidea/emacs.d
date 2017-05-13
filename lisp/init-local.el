@@ -41,6 +41,7 @@
  '(flycheck-json-python-json-executable "python3")
  '(python-shell-completion-native-enable nil)
  '(python-shell-interpreter "python3")
+ '(markdown-command "/usr/local/bin/kramdown")
  '(session-use-package t nil (session)))
 
 ;; Setting theme and font
