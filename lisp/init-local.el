@@ -117,13 +117,13 @@ SIZE"
 ;; keymap binding
 ;; set M-space to setmark, repalce C-@ with C-space
 ;; (global-set-key (kbd "M-<SPC>") 'set-mark-command)
-(defun find-git-repo (filename &optional wildcards)
-  "Find the git repo by FILENAME and optional WILDCARDS."
-  (interactive
-   (find-file-read-args "Find Git Repo: "
-                        (confirm-nonexistent-file-or-buffer)))
-  (magit-status filename))
-(global-set-key (kbd "C-c C-g") 'find-git-repo)
+;; (defun find-git-repo (filename &optional wildcards)
+;;   "Find the git repo by FILENAME and optional WILDCARDS."
+;;   (interactive
+;;    (find-file-read-args "Find Git Repo: "
+;;                         (confirm-nonexistent-file-or-buffer)))
+;;   (magit-status filename))
+;; (global-set-key (kbd "C-c C-g") 'find-git-repo)
 
 ;; (server-start)
 
