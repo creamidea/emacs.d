@@ -1,3 +1,24 @@
+# Prolog
+Based on [purcell/emacs.d](https://github.com/purcell/emacs.d )
+
+# Update
+Update the config with `git pull`. You'll probably also want/need to update
+the third-party packages regularly too:
+
+<kbd>M-x package-list-packages</kbd>, then <kbd>U</kbd> followed by <kbd>x</kbd>.
+
+You should usually restart Emacs after pulling changes or updating
+packages so that they can take effect. Emacs should usually restore
+your working buffers when you restart due to this configuration's use
+of the `desktop` and `session` packages.
+
+# Screenshot
+![purcell/emacs](http://ww1.sinaimg.cn/mw690/61207aabgw1f6x1gmyz7zj20ik0jzn4l.jpg)
+
+![purcell/emacs](http://ww2.sinaimg.cn/mw690/61207aabgw1f6x2fjvjbvj20im0jydni.jpg)
+
+----------------------------------------------------------------
+
 [![Build Status](https://travis-ci.org/purcell/emacs.d.png?branch=master)](https://travis-ci.org/purcell/emacs.d)
 
 # A reasonable Emacs config
@@ -113,7 +134,7 @@ versions (see "Updates" above). If you still experience problems, go ahead and
 
 <hr>
 
-[![](http://api.coderwall.com/purcell/endorsecount.png)](http://coderwall.com/purcell)
+[![](http://www.gravatar.com/avatar/04f3babefa4ba85e7904b40e6846e217)](http://coderwall.com/purcell)
 
 [![](http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.png)](http://uk.linkedin.com/in/stevepurcell)
 
