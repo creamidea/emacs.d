@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: utf-8 encoding
+# key: utf8
+# --
+#!/usr/bin/env node
+// -*- coding: utf-8 -*-
+
+'use strict'
+
+$0

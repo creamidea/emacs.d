@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: sequence
+# key: sequence
+# --
+#+BEGIN_HTML
+<div class="js-sequence-diagram">
+Title: $0
+<script type=application/js-diagram+json>
+{}
+</script>
+</div>
+#+END_HTML

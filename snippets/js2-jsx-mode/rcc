@@ -1,0 +1,24 @@
+# -*- mode: snippet -*-
+# name: rcc
+# key: rcc
+# --
+import React from 'react'
+
+const { Component } = React
+
+export default `(file-name-base (buffer-file-name (window-buffer (minibuffer-selected-window))))` = ComposedComponent => class extends Component {
+  constructor () {
+    super()
+    this.state = {
+    }
+  }
+
+  $0
+
+  componentDidMount () {
+  }
+
+  render () {
+    return <ComposedComponent {...this.props} ={this.}/>
+  }
+}

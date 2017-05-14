@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: image 2
+# key: <img2
+# --
+#+BEGIN_EXPORT HTML
+<div class="lazy-load-img-wrapper">
+<noscript>
+<img src="$1"
+     alt="$2" title="$2"/>
+</noscript>
+<img data-src="$1"
+     lazy-load class="lazy-load-img" alt="$2" title="$2"/>
+<p class="title-img-p">题图来自网络</p>
+</div>
+#+END_EXPORT

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: image
+# key: <img
+# --
+#+CAPTION: $1
+[[static-img:$1.png]]

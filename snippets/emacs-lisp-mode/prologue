@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: prologue
+# key: prologue
+# --
+;;; package --- Summary
+;;; Commentary:
+$1
+
+;;; Code:
+$0
+
+(provide '`(file-name-base (buffer-file-name (window-buffer (minibuffer-selected-window))))`)
+;;; `(file-relative-name (buffer-file-name (window-buffer (minibuffer-selected-window)))).el` ends here
+
+
+

@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: flowchart
+# key: flowchart
+# --
+#+BEGIN_HTML
+<div class="js-flowchart-diagram">
+Title: $0
+<script type=application/js-diagram+json>
+{}
+</script>
+</div>
+#+END_HTML
+

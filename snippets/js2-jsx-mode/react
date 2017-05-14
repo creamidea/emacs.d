@@ -1,0 +1,27 @@
+# -*- mode: snippet -*-
+# name: react
+# key: react
+# --
+import React from 'react'
+
+const { Component } = React
+
+export default class `(file-name-base (buffer-file-name (window-buffer (minibuffer-selected-window))))` extends Component {
+  constructor () {
+    super()
+    this.state = {
+    }
+  }
+
+  componentDidMount () {
+  }
+
+  render () {
+    return (
+      <div>
+        $0
+      </div>
+    )
+  }
+
+}

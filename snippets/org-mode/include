@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: insert INCLUDE
+# key: <i
+# --
+#+INCLUDE: "$0" src $1

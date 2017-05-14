@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+#contributor : creamidea <creamidea@gmail.com>
+#name : ci
+#key  : ci
+# --
+
+Yours Sincerely
+NekoTrek
+`(format-time-string "%Y-%m-%d %H:%M:%S %Z" (current-time))`

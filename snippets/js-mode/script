@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: node js scirpt
+# key: script
+# --
+#!/usr/bin/env node
+// -*- coding: utf-8 -*-
+
+'use strict'
+
+$0

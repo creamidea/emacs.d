@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# contributor : creamidea <creamidea@gmail.com>
+# name: enci
+# key: enci
+# --
+;; -*- epa-file-encrypt-to: ("creamidea@gmail.com") -*-
+
+$0
+

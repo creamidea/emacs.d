@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: wiki
+# key: wiki
+# --
+#+TITLE: ${1:No Title}
+#+AUTHOR: Junjia Ni
+#+EMAIL: creamidea(AT)gmail.com
+#+CATEGORY: wiki
+#+DESCRIPTION: ${2:$1}
+#+KEYWORDS: ${3:emacs orgmode wiki}
+#+OPTIONS: H:4 num:t toc:t \n:nil @:t ::t |:t ^:nil f:t TeX:t email:t timestamp:t
+#+LINK_HOME: https://creamidea.github.io
+#+STARTUP: showall
+
+
+* 前言
+$0
+* 尾声

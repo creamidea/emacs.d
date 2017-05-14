@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: blog
+# key: blog
+# --
+#+TITLE:${1:No Title}
+#+AUTHOR:Junjia.Ni
+#+EMAIL:creamidea(AT)gmail.com
+#+OPTIONS:H:4 num:t toc:t \n:nil @:t ::t |:t ^:t f:t TeX:t email:t
+#+LINK_HOME: https://creamidea.github.io
+#+STYLE:<link rel="stylesheet" type="text/css" href="../css/style.css">
+#+INFOJS_OPT:
+#+STARTUP: showall indent
+#+STARTUP: hidestars
+#+BEGIN_HTML
+---
+layout: default
+title: ${1:title}
+excerpt: ${2:excerpt}
+---
+$0

@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: blog
+# key: blog
+# --
+#+TITLE: ${1:`(file-name-base (buffer-file-name (window-buffer (minibuffer-selected-window))))`}
+${2:$$(yas-choose-value '("#+AUTHOR: 冰糖火箭筒(Junjia Ni)\n#+EMAIL: creamidea(AT)gmail.com" "#+AUTHOR: 蜂蜜甜甜圈(Yi Ou)\n#+EMAIL: 718413182(AT)qq.com"))}
+#+DATE: `(format-time-string "%Y-%m-%d" (current-time))`
+#+CATEGORY: article
+#+DESCRIPTION: ${3:$1}
+#+KEYWORDS: ${4:emacs,orgmode}
+#+OPTIONS: H:4 num:t toc:t \n:nil @:t ::t |:t ^:nil f:t tex:nil email:t <:t date:t timestamp:t
+#+LINK_HOME: https://creamidea.github.io
+#+STARTUP: showall
+
+
+* 前言
+$0
+* 尾声

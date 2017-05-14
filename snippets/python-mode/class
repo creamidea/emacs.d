@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: class
+# key: class
+# --
+class ${1:ClassName}(object):
+    """
+    ${2:Do Something}
+    """
+
+    def __init__(self${3:, argv}):
+        """
+	${4:Init $1}
+        """
+	$0
