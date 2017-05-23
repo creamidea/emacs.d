@@ -1,9 +1,12 @@
 /url/cache
 /.emacs.desktop
 /auto-save-list
+/network-security.data
 /.session
 /session.*
 /custom.el
+srecode-map.el
+.DS_Store
 *.elc
 CVS
 .svn
@@ -46,5 +49,4 @@ site-lisp/package/
 /anaconda-mode/
 /.historian
 /.uptimes.el
-.DS_Store
-srecode-map.el
+/rake.cache
