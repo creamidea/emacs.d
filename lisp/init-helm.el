@@ -8,6 +8,7 @@
   (global-set-key (kbd "C-x C-f") 'helm-find-files)
   (global-set-key (kbd "C-x C-d") 'helm-browse-project)
   (global-set-key (kbd "C-<f6>") 'helm-ls-git-ls)
+  ;; (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
   (helm-mode 1)
   (helm-descbinds-mode))
 
