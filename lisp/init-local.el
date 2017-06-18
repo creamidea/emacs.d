@@ -53,7 +53,7 @@
    ;; snaityinc-solarized-light/dark
    ;; base16-paraiso
    ;; base16-tomorrow-night
-   '(custom-enabled-themes (quote (base16-tomorrow-night)))))
+   '(custom-enabled-themes (quote (base16-eighties)))))
 
 (defun set-en-font (family size)
   "Set English Font.
