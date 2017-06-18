@@ -4,11 +4,8 @@
 # update the repository
 
 UPSTREAM=purcell
-MASTER=master
 
-git checkout $UPSTREAM
-git pull --rebase $UPSTREAM master
-git checkout $MASTER
-git merge $UPSTRAM
+git fetch $UPSTREAM master
+git merge --no-ff $UPSTREAM/master
 
 echo "DONE"
