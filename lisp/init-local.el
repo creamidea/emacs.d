@@ -59,9 +59,12 @@
   "Set English Font.
 FAMILY: Monaco; DejaVu Sans Mono; Hack;
 SIZE"
-  (custom-set-faces
+  ;; https://www.emacswiki.org/emacs/SetFonts
+  (set-face-attribute
    ;; :height 120 :width normal
-   `(default ((t (:family ,family :weight Regular :size ,size))))))
+   'default nil :family family)
+  (set-face-attribute
+   'default nil :height (* 10 size)))
 
 (defun set-cjk-font (family size)
   "Set Chinese/Japan/Korea Font.
@@ -74,9 +77,11 @@ SIZE"
      ;; :height font-size
      (font-spec :family family :size size))))
 
-(set-en-font "Monaco" 12)
-(set-cjk-font "PingFang SC" 13)
-;; (if (display-graphic-p) )
+(if (and (display-graphic-p)
+         (eq system-type 'darwin))
+    (progn
+      (set-en-font "Monaco" 13)
+      (set-cjk-font "PingFang SC" 13)))
 
 ;; Require
 ;; yasnippet
