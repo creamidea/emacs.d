@@ -1,6 +1,6 @@
 (setq auto-mode-alist
       (append '(("SConstruct\\'" . python-mode)
-		("SConscript\\'" . python-mode))
+                ("SConscript\\'" . python-mode))
               auto-mode-alist))
 
 ;; https://github.com/gregsexton/ob-ipython/issues/28#issuecomment-182346001
