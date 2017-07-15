@@ -2,7 +2,7 @@
 ;;; Commentary:
 
 ;;; Code:
-
+
 ;; (add-hook 'window-configuration-change-hook
 ;;           (lambda ()
 ;;             (setq frame-title-format
@@ -49,57 +49,12 @@
 (eval-after-load 'base16-theme
   (custom-set-variables
    ;; https://chriskempson.github.io/base16/
+   ;; base16-default-dark
    ;; sanityinc-tomorrow-light/eighties/night
    ;; snaityinc-solarized-light/dark
    ;; base16-paraiso
-   ;; base16-tomorrow-night
-   '(custom-enabled-themes (quote (base16-eighties)))))
-
-(defun set-en-font (family size)
-  "Set English Font.
-FAMILY: Monaco; DejaVu Sans Mono; Hack;
-SIZE"
-  ;; https://www.emacswiki.org/emacs/SetFonts
-  (set-face-attribute
-   ;; :height 120 :width normal
-   'default nil :family family)
-  (set-face-attribute
-   'default nil :height (* 10 size)))
-
-(defun set-cjk-font (family size)
-  "Set Chinese/Japan/Korea Font.
-FAMILY:  Microsoft Yahei
-SIZE"
-  (dolist (charset '(kana han symbol cjk-misc bopomofo))
-    (set-fontset-font
-     (frame-parameter nil 'font)
-     charset
-     ;; :height font-size
-     (font-spec :family family :size size))))
-
-(if (and (display-graphic-p)
-         (eq system-type 'darwin))
-    (progn
-      (set-en-font "Monaco" 13)
-      (set-cjk-font "PingFang SC" 13)))
-
-;; Require
-;; yasnippet
-(require-package 'yasnippet)
-;; (after-load 'yasnippet
-;;   (yas-global-mode 1))
-(eval-after-load 'yasnippet
-  (progn
-    (setq yas-snippet-dirs
-          '("~/.emacs.d/snippets"))
-    (yas-global-mode t)))
-
-(require 'epa-file)
-;; (setq epa-file-select-keys nil)
-(global-set-key (kbd "C-c g e") 'epa-encrypt-region)
-(global-set-key (kbd "C-c g d") 'epa-decrypt-region)
-(global-set-key (kbd "C-c g v") 'epa-verify-region)
-(global-set-key (kbd "C-c g s") 'epa-sign-region)
+   ;; base16-tomorrow-night/base16-eighties
+   '(custom-enabled-themes (quote (base16-onedark)))))
 
 (defun insert-comment ()
   (interactive)
@@ -111,7 +66,7 @@ SIZE"
                 (lambda (x) (append myComment (format "\n * %s" x)))
                 (split-string (buffer-string) "\n" t)) " "))))
 
-;; using elpa
+;; org-mode using elpa
 ;; (add-to-list 'load-path "~/Repository/org-mode/lisp")
 ;; (add-to-list 'load-path "~/Repository/org-mode/contrib/lisp" t)
 

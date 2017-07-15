@@ -68,6 +68,7 @@
 (require 'init-windows)
 (require 'init-sessions)
 (require 'init-fonts)
+(require 'init-my-fonts)
 (require 'init-mmm)
 
 (require 'init-editing-utils)
@@ -150,6 +151,9 @@
 ;; Allow users to provide an optional "init-local" containing personal settings
 ;;----------------------------------------------------------------------------
 (require 'init-local nil t)
+(require 'init-yas nil t)
+(require 'init-epa nil t)
+(require 'init-work nil t)
 
 
 ;;----------------------------------------------------------------------------
