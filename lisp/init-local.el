@@ -44,17 +44,21 @@
  '(markdown-command "/usr/local/bin/kramdown")
  '(session-use-package t nil (session)))
 
-;; Setting theme and font
-(require-package 'base16-theme)
-(eval-after-load 'base16-theme
+;; Setting theme
+;; (require-package 'base16-theme)
+;; (eval-after-load 'base16-theme
+;;   (custom-set-variables
+;;    ;; https://chriskempson.github.io/base16/
+;;    ;; base16-default-dark
+;;    ;; sanityinc-tomorrow-light/eighties/night
+;;    ;; snaityinc-solarized-light/dark
+;;    ;; base16-paraiso/base16-onedark
+;;    ;; base16-tomorrow-night/base16-eighties
+;;    '(custom-enabled-themes (quote (base16-onedark)))))
+(require-package 'dracula-theme)
+(eval-after-load 'dracula-theme
   (custom-set-variables
-   ;; https://chriskempson.github.io/base16/
-   ;; base16-default-dark
-   ;; sanityinc-tomorrow-light/eighties/night
-   ;; snaityinc-solarized-light/dark
-   ;; base16-paraiso
-   ;; base16-tomorrow-night/base16-eighties
-   '(custom-enabled-themes (quote (base16-onedark)))))
+   '(custom-enabled-themes (quote (dracula)))))
 
 (defun insert-comment ()
   (interactive)

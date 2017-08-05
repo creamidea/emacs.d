@@ -3,16 +3,17 @@
 
 ;;; Commentary:
 
-(defun set-en-font (family size)
+(defun set-en-font (font size)
   "Set English Font.
-FAMILY: Monaco; DejaVu Sans Mono; Hack;
+FONT: Monaco; DejaVu Sans Mono; Hack; Source Code Pro
 SIZE"
   ;; https://www.emacswiki.org/emacs/SetFonts
+  ;; (set-face-attribute
+  ;;  ;; :height 120 :width normal
+  ;;  'default nil :family family :height (* 10 size))
   (set-face-attribute
    ;; :height 120 :width normal
-   'default nil :family family)
-  (set-face-attribute
-   'default nil :height (* 10 size)))
+   'default nil :font (format "%s-%d" font size)))
 
 (defun set-cjk-font (family size)
   "Set Chinese/Japan/Korea Font.
@@ -28,7 +29,7 @@ SIZE"
 ;; Monaco
 (when (and (display-graphic-p)
            (eq system-type 'darwin))
-  (set-en-font "Source Code Pro" 15)
+  (set-en-font "Source Code Pro" 14)
   (set-cjk-font "PingFang SC" 14))
 
 (provide 'init-my-fonts)
