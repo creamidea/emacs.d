@@ -14,6 +14,8 @@
     (add-hook 'haskell-mode-hook 'eldoc-mode)
     )
   (after-load 'intero
+    ;; Don't clobber counsel-ag binding
+    (define-key intero-mode-map (kbd "M-?") nil)
     (after-load 'flycheck
       (flycheck-add-next-checker 'intero
                                  '(warning . haskell-hlint)))))
