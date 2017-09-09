@@ -50,7 +50,4 @@ site-lisp/package/
 /.historian
 /.uptimes.el
 /rake.cache
-org-*
-/elpa-.*
-srecode-map.el
-.DS_Store
+/plantuml.jar

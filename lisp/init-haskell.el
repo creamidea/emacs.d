@@ -14,7 +14,7 @@
     (add-hook 'haskell-mode-hook 'eldoc-mode)
     )
   (after-load 'intero
-    ;; Don't clobber counsel-ag binding
+    ;; Don't clobber sanityinc/counsel-search-project binding
     (define-key intero-mode-map (kbd "M-?") nil)
     (after-load 'flycheck
       (flycheck-add-next-checker 'intero
