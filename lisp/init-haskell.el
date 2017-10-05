@@ -5,9 +5,10 @@
 
 (when (maybe-require-package 'intero)
   (after-load 'haskell-mode
-    (add-hook 'haskell-mode-hook 'intero-mode)
-    (add-hook 'haskell-mode-hook 'eldoc-mode)
-    )
+    (intero-global-mode)
+    (add-hook 'haskell-mode-hook 'eldoc-mode))
+  (after-load 'haskell-cabal
+    (define-key haskell-cabal-mode-map (kbd "C-c C-l") 'intero-restart))
   (after-load 'intero
     ;; Don't clobber sanityinc/counsel-search-project binding
     (define-key intero-mode-map (kbd "M-?") nil)
