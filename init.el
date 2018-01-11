@@ -102,6 +102,7 @@
 (require 'init-python-mode)
 (require 'init-haskell)
 (require 'init-elm)
+(require 'init-purescript)
 (require 'init-ruby-mode)
 (require 'init-rails)
 (require 'init-sql)
