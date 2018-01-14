@@ -3,16 +3,16 @@
 
 ;;; Code:
 
-;; (add-hook 'window-configuration-change-hook
-;;           (lambda ()
-;;             (setq frame-title-format
-;;                   (concat
-;;                    ;; "creamidea@gmail.com: "
-;;                    ;; invocation-name "@" system-name ": "
-;;                    "Au9ustTrek@" system-name ":"
-;;                    (replace-regexp-in-string
-;;                     (concat "/home/" user-login-name) "~"
-;;                     (or buffer-file-name "%b"))))))
+(add-hook 'window-configuration-change-hook
+          (lambda ()
+            (setq frame-title-format
+                  (concat
+                   ;; "creamidea@gmail.com: "
+                   ;; invocation-name "@" system-name ": "
+                   "Au9ustTrek@" system-name ":"
+                   (replace-regexp-in-string
+                    (concat "/home/" user-login-name) "~"
+                    (or buffer-file-name "%b"))))))
 
 ;; or use (string-equal system-type "windows-nt")
 (when (memq window-system '(w32 pc))
@@ -30,7 +30,7 @@
 ;; set transparency
 (set-frame-parameter (selected-frame) 'alpha '(99 99))
 (add-to-list 'default-frame-alist '(alpha 99 99))
-
+
 (custom-set-variables
  '(user-full-name "Junjia Ni")
  '(user-mail-address "creamidea@gmail.com")
@@ -44,22 +44,6 @@
  '(markdown-command "/usr/local/bin/kramdown")
  '(session-use-package t nil (session)))
 
-;; Setting theme
-;; (require-package 'base16-theme)
-;; (eval-after-load 'base16-theme
-;;   (custom-set-variables
-;;    ;; https://chriskempson.github.io/base16/
-;;    ;; base16-default-dark
-;;    ;; sanityinc-tomorrow-light/eighties/night
-;;    ;; snaityinc-solarized-light/dark
-;;    ;; base16-paraiso/base16-onedark
-;;    ;; base16-tomorrow-night/base16-eighties
-;;    '(custom-enabled-themes (quote (base16-onedark)))))
-(require-package 'dracula-theme)
-(eval-after-load 'dracula-theme
-  (custom-set-variables
-   '(custom-enabled-themes (quote (dracula)))))
-
 (defun insert-comment ()
   (interactive)
   (insert
@@ -73,12 +57,12 @@
 ;; org-mode using elpa
 ;; (add-to-list 'load-path "~/Repository/org-mode/lisp")
 ;; (add-to-list 'load-path "~/Repository/org-mode/contrib/lisp" t)
-
+
 ;; auto mode alist
 ;; (add-to-list 'auto-mode-alist '("\\.gpg\\'" . text-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js-jsx-mode))
 (add-to-list 'auto-mode-alist '("\\.babelrc\\'" . json-mode))
-
+
 ;; keymap binding
 ;; set M-space to setmark, repalce C-@ with C-space
 ;; (global-set-key (kbd "M-<SPC>") 'set-mark-command)
@@ -89,7 +73,7 @@
 ;;                         (confirm-nonexistent-file-or-buffer)))
 ;;   (magit-status filename))
 ;; (global-set-key (kbd "C-c C-g") 'find-git-repo)
-
+
 ;; (server-start)
 
 (provide 'init-local)

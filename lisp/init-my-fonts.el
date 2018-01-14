@@ -26,11 +26,13 @@ SIZE"
      ;; :height font-size
      (font-spec :family family :size size))))
 
-;; Monaco
+;; Monaco/Source Code Pro
 (when (and (display-graphic-p)
            (eq system-type 'darwin))
-  (set-en-font "Source Code Pro" 14)
-  (set-cjk-font "PingFang SC" 14))
+  (progn
+    (set-en-font "Iosevka" 15)
+    (set-cjk-font "PingFang SC" 15)))
+
 
 (provide 'init-my-fonts)
 ;;; init-my-fonts.el ends here

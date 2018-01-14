@@ -69,7 +69,6 @@
 (require 'init-windows)
 (require 'init-sessions)
 (require 'init-fonts)
-(require 'init-my-fonts)
 (require 'init-mmm)
 
 (require 'init-editing-utils)
@@ -160,6 +159,8 @@
 (require 'init-yas nil t)
 (require 'init-epa nil t)
 (require 'init-work nil t)
+(require 'init-my-themes nil t)
+(require 'init-my-fonts nil t)
 
 
 ;;----------------------------------------------------------------------------
