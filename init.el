@@ -1,4 +1,5 @@
 ;; -*- lexical-binding: t -*-
+(setq debug-on-error t)
 
 ;;; This file bootstraps the configuration, which is divided into
 ;;; a number of other files.
@@ -44,7 +45,6 @@
 ;;----------------------------------------------------------------------------
 
 (require-package 'wgrep)
-(require-package 'project-local-variables)
 (require-package 'diminish)
 (require-package 'scratch)
 (require-package 'command-log-mode)
@@ -64,6 +64,7 @@
 (require 'init-recentf)
 (require 'init-smex)
 (require 'init-ivy)
+;;(require 'init-helm)
 (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
@@ -78,9 +79,6 @@
 (require 'init-darcs)
 (require 'init-git)
 (require 'init-github)
-(unless (version<= emacs-version "24.3")
-  (require 'init-async)
-  (require 'init-helm))
 
 (require 'init-projectile)
 
@@ -110,7 +108,7 @@
 (require 'init-yaml)
 (require 'init-docker)
 (require 'init-terraform)
-(require 'init-nix)
+;;(require 'init-nix)
 (maybe-require-package 'nginx-mode)
 
 (require 'init-paredit)
@@ -127,6 +125,9 @@
 
 (require 'init-folding)
 (require 'init-dash)
+
+;;(require 'init-twitter)
+;; (require 'init-mu)
 (require 'init-ledger)
 ;; Extra packages which don't require any configuration
 
@@ -139,13 +140,17 @@
 (maybe-require-package 'regex-tool)
 (maybe-require-package 'dotenv-mode)
 
+(when (maybe-require-package 'uptimes)
+  (setq-default uptimes-keep-count 200)
+  (add-hook 'after-init-hook (lambda () (require 'uptimes))))
+
+
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
 ;;----------------------------------------------------------------------------
 (require 'server)
 (unless (server-running-p)
   (server-start))
-
 
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
@@ -155,24 +160,17 @@
 
 
 ;;----------------------------------------------------------------------------
-;; Allow users to provide an optional "init-local" containing personal settings
-;;----------------------------------------------------------------------------
-(require 'init-local nil t)
-(require 'init-yas nil t)
-(require 'init-epa nil t)
-(require 'init-work nil t)
-(require 'init-my-themes nil t)
-(require 'init-my-fonts nil t)
-
-
-;;----------------------------------------------------------------------------
 ;; Locales (setting them earlier in this file doesn't work in X)
 ;;----------------------------------------------------------------------------
 (require 'init-locales)
 
 
-(when (maybe-require-package 'uptimes)
-  (add-hook 'after-init-hook (lambda () (require 'uptimes))))
+;;----------------------------------------------------------------------------
+;; Allow users to provide an optional "init-local" containing personal settings
+;;----------------------------------------------------------------------------
+(require 'init-local nil t)
+(require 'init-my-themes nil t)
+(require 'init-my-fonts nil t)
 
 
 (provide 'init)
