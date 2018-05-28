@@ -8,7 +8,7 @@
 (eval-after-load 'base16-theme
   (custom-set-variables
    ;; https://chriskempson.github.io/base16/
-   '(custom-enabled-themes (quote (base16-material-darker)))))
+   '(custom-enabled-themes (quote (base16-onedark)))))
 
 ;;; set themes dracula-theme
 ;; (require-package 'dracula-theme)
